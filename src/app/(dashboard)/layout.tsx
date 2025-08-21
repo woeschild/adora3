@@ -1,6 +1,7 @@
 // import type { Metadata } from "next";
-import { Poppins } from "@next/font/google";
+import { Poppins } from "next/font/google";
 import "../../globals.css" //important for tailwind
+import Menu from "@/components/menu/menu";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,8 +17,13 @@ export default function DashboardLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} flex font-normal text-sm`}>
-        <div className="text-[var(--accent)]">Sidebar</div>
-        {children}
+        <Menu/>
+        <div className="flex-grow">
+          <div className="sticky">header</div>
+          <div className="">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

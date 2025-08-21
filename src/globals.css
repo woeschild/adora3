@@ -3,5 +3,7 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #060606;
-  --accent: #E25F00;  
+  --accent: hsl(25, 100%, 44%);
+  --accent-light: hsl(25, 100%, 54%);
+  --accent-dark: hsl(25, 100%, 38%);
 }
