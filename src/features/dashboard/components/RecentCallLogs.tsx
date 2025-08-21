@@ -46,7 +46,7 @@ export function RecentCallLogs() {
         </button>
       </div>
 
-      {/* Table header (hidden on small screens) */}
+      {/* Table header (will be hidden on small screens) */}
       <div className="hidden md:grid grid-cols-5 shadow-xs gap-4 text-sm font-semibold text-orange-500 pb-2 mb-2">
         <span>Agents</span>
         <span>Date</span>
