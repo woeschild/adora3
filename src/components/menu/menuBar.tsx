@@ -19,7 +19,7 @@ type MenuBarProps = MenuItemType;
  * @example
  * <MenuBar icon={<Icon />} name="Dashboard" path="/" state="active" />
  */
-export default function MenuBar({ icon, name, path, state }: MenuBarProps) {
+export default function MenuBar({ icon, name, path, state, onNavigate }: MenuBarProps) {
   const isActive = state === "active";
   const isDormant = state === "dormant";
 
@@ -38,6 +38,7 @@ export default function MenuBar({ icon, name, path, state }: MenuBarProps) {
 
   return (
     <Link
+      onClick={onNavigate}
       href={path}
       className={linkClassName}
       aria-current={isActive ? "page" : undefined} // Accessibility: mark active page

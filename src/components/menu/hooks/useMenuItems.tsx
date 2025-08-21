@@ -16,6 +16,7 @@ export type MenuItemType = {
   name: string;
   path: string;
   state: "active" | "inactive" | "dormant";
+  onNavigate?: () => void;
 };
 
 /**
