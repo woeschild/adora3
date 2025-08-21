@@ -49,9 +49,9 @@ export function Navbar() {
   });
 
   return (
-    <header className="w-full sm:shadow-sm shadow-none px-4 py-2 flex items-center gap-3">
+    <header className="w-full sm:shadow-sm shadow-none px-4 py-2 flex items-center justify-between">
       {/* Left: Breadcrumbs (flex-1 ensures it grows, min-w-0 allows truncation) */}
-      <div className="flex-1 min-w-0">
+      <div className="min-w-0">
         <Breadcrumbs items={items} />
       </div>
 
