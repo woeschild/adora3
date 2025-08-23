@@ -6,6 +6,8 @@ import { AgentInfo } from "./AgentInfo";
 import { Notifications } from "./Notifications";
 import { UserMenu } from "./UserMenu";
 import avatar from "../../../../public/profile.png";
+import { AccountCard } from "./AccountCard";
+import { useState, useRef, useEffect } from "react";
 
 type Crumb = { label: string; href?: string };
 
@@ -26,8 +28,33 @@ function prettify(segment: string) {
 }
 
 export default function Header() {
+  const [show, setShow] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const userMenuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname() || "/";
   const segments = pathname.split("/").filter(Boolean);
+
+  // Handle click outside to close dropdown
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        userMenuRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        !userMenuRef.current.contains(event.target as Node)
+      ) {
+        setShow(false);
+      }
+    }
+
+    if (show) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [show]);
 
   // Always produce exactly two crumbs
   let visibleSegments: string[];
@@ -63,7 +90,26 @@ export default function Header() {
       {/* Right: Notifications + User */}
       <div className="flex items-center gap-4 shrink-0">
         <Notifications />
-        <UserMenu name="Company A" email="companyA@gmail.com" avatar={avatar} />
+        <div ref={userMenuRef}>
+          <UserMenu 
+            name="Company A" 
+            email="companyA@gmail.com" 
+            avatar={avatar} 
+            onClick={() => { setShow(!show) }} 
+          />
+        </div>
+      </div>
+      
+      {/* Dropdown with smooth slide animation */}
+      <div
+        ref={dropdownRef}
+        className={`fixed top-16 right-4 z-50 transform transition-all duration-300 ease-in-out origin-top ${
+          show 
+            ? 'opacity-100 scale-y-100 translate-y-0' 
+            : 'opacity-0 scale-y-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <AccountCard />
       </div>
     </header>
   );

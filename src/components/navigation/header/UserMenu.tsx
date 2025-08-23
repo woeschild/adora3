@@ -8,11 +8,12 @@ interface UserMenuProps {
   name: string;
   email: string;
   avatar: string | StaticImport;
+  onClick?: ()=> void;
 }
 
-export function UserMenu({ name, email, avatar }: UserMenuProps) {
+export function UserMenu({ name, email, avatar, onClick }: UserMenuProps) {
   return (
-    <div className="flex items-center gap-2 sm:gap-3 p-2 rounded-xl hover:bg-gray-50 cursor-pointer">
+    <div onClick={onClick} className="flex items-center gap-2 sm:gap-3 p-2 rounded-xl hover:bg-gray-50 cursor-pointer">
       {/* Avatar */}
       <div className="w-8 h-8 relative shrink-0">
         <Image
@@ -22,7 +23,6 @@ export function UserMenu({ name, email, avatar }: UserMenuProps) {
           className="rounded-full object-cover"
         />
       </div>
-
       {/* User info – hidden on mobile */}
       <div className="hidden sm:flex flex-col min-w-0">
         <span className="text-sm font-semibold text-gray-900 truncate">
