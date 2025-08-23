@@ -16,7 +16,7 @@ const PaymentOption: React.FC<PaymentOptionProps> = ({
   onChange,
 }) => {
   return (
-    <label className="flex items-center gap-3 cursor-pointer border rounded-lg px-4 py-3 hover:border-orange-400 transition w-full">
+    <label className="flex items-center gap-3 cursor-pointer rounded-lg px-4 py-3 hover:bg-gray-100 transition w-fit">
       <input
         type="radio"
         name="payment"
