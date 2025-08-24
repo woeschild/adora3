@@ -1,7 +1,7 @@
 import { Upload } from "lucide-react";
 import Link from "next/link";
 
-export  const AccountCard = () => {
+export  const AccountCard = ({onLinkClick}:{onLinkClick: ()=> void}) => {
     const menuItems = [
       { text: 'Profile', path:"/profile" },
       { text: 'Account Settings', path:"/account-settings" },
@@ -41,6 +41,7 @@ export  const AccountCard = () => {
             <Link
               key={index}
               href={item.path}
+              onClick={onLinkClick}
               className="block text-gray-600 hover:bg-gray-100 hover:text-gray-800 rounded-md px-3 py-3 transition-colors duration-200"
             >
               <span>{item.text}</span>

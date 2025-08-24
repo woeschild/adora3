@@ -109,7 +109,7 @@ export default function Header() {
             : 'opacity-0 scale-y-0 -translate-y-2 pointer-events-none'
         }`}
       >
-        <AccountCard />
+        <AccountCard onLinkClick={()=> setShow(false)} />
       </div>
     </header>
   );
