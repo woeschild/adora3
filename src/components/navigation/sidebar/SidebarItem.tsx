@@ -31,13 +31,13 @@ export default function SidebarItem({
     <Link
       href={href}
       onClick={handleClick}
-      className={`flex items-center gap-3 px-6 py-3 rounded-lg transition 
+      className={`flex items-center gap-2 px-3 py-3 rounded-lg transition 
          ${
-          pathname === href ? "bg-[var(--primary)] text-[var(--accent)]" : "text-[var(--primary)] hover:bg-[var(--accent-light)]"
+          pathname.includes(href) ? "bg-[var(--primary)] text-[var(--accent)]" : "text-[var(--primary)] hover:bg-[var(--accent-dark)]"
         }`}
     >
-      <Icon className="h-5 w-5" />
-      <span className="text-sm">{label}</span>
+      <Icon size={16} />
+      <span className="text-xs">{label}</span>
     </Link>
   );
 }

@@ -24,10 +24,10 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="bg-[hsl(var(--color-primary))] text-[hsl(var(--color-secondary))]"
+      className="bg-[var(--color-primary)] text-[var(--color-secondary)]"
     >
       <body
-        className={`${poppins.variable} font-sans antialiased min-h-screen`}
+        className={`${poppins.variable} font-sans antialiased min-h-screen text-xs`}
       >
         <div className="flex h-screen">
           {/* Sidebar - desktop only */}
@@ -38,7 +38,7 @@ export default function RootLayout({
               <Header />
 
             {/* Scrollable content */}
-            <main className="flex-1 mt-12 text-sm md:m-0 overflow-y-auto">
+            <main className="flex-1 overflow-y-auto p-2">
               {children}
             </main>
           </div>

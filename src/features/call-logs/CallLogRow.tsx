@@ -27,17 +27,17 @@ export function CallLogRow({
     >
       {/* Mobile labels */}
       <div className="md:hidden text-xs text-gray-500">Agent</div>
-      <div className="text-sm">{log.agent}</div>
+      <div className="text-xs">{log.agent}</div>
 
       <div className="md:hidden text-xs text-gray-500">Date</div>
-      <div className="text-sm">{log.date}</div>
+      <div className="text-xs">{log.date}</div>
 
       <div className="md:hidden text-xs text-gray-500">Time</div>
-      <div className="text-sm">{log.time}</div>
+      <div className="text-xs">{log.time}</div>
 
       <div className="md:hidden text-xs text-gray-500">Transcription</div>
       <div
-        className="text-sm truncate text-gray-700"
+        className="text-xs truncate text-gray-700"
       >
         {log.transcription}
       </div>

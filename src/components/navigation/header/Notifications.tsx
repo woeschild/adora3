@@ -10,7 +10,7 @@ export function Notifications() {
       aria-label="Notifications"
       className="p-2 rounded-full hover:bg-gray-100 transition"
     >
-      <Bell className="w-6 h-6 text-gray-700" />
+      <Bell size={16} className=" text-gray-700" />
     </Link>
   );
 }

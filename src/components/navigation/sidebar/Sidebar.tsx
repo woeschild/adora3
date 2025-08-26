@@ -22,17 +22,17 @@ export default function Sidebar() {
         onClick={() => setOpen(true)}
         aria-label="Open sidebar"
       >
-        <Menu className="h-6 w-6 text-[var(--accent)]" />
+        <Menu size={16} className="text-[var(--accent)]" />
       </button>
       }
 
       {/* Sidebar */}
       <aside
         className={`
-          fixed inset-y-0 left-0 z-40 flex flex-col bg-[var(--accent)] text-white w-64
+          fixed inset-y-0 left-0 z-40 flex flex-col bg-[var(--accent)] text-white w-48
           transform transition-transform duration-300 ease-in-out
           ${open ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0 md:static md:w-64
+          md:translate-x-0 md:static md:w-48
         `}
       >
         {/* Close button (mobile only) */}
@@ -42,7 +42,7 @@ export default function Sidebar() {
             aria-label="Close sidebar"
             className="p-2 rounded-lg hover:bg-white/10 absolute"
           >
-            <X className="h-6 w-6 text-[var(--accent)]" />
+            <X size={16} className="text-[var(--accent)]" />
           </button>
         </div>
 

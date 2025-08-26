@@ -15,10 +15,10 @@ const CallTable: React.FC = () => {
       <table className="w-full min-w-[500px] border-collapse">
         <thead>
           <tr className="border-b bg-gray-50 text-left text-gray-600">
-            <th className="px-3 py-3 text-sm font-medium">Date</th>
-            <th className="px-3 py-3 text-sm font-medium">Time</th>
-            <th className="px-3 py-3 text-sm font-medium">Name & Number</th>
-            <th className="px-3 py-3 text-sm font-medium text-center">Call Cycle</th>
+            <th className="px-3 py-3 font-medium">Date</th>
+            <th className="px-3 py-3 font-medium">Time</th>
+            <th className="px-3 py-3 font-medium">Name & Number</th>
+            <th className="px-3 py-3 font-medium text-center">Call Cycle</th>
           </tr>
         </thead>
         <tbody>

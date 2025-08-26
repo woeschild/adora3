@@ -76,7 +76,7 @@ export default function Header() {
   });
 
   return (
-    <header className="w-full sm:shadow-xs shadow-none px-4 py-1 flex items-center justify-between">
+    <header className="w-full sm:shadow-xs shadow-none text-xs px-4 py-1 flex items-center justify-between">
       {/* Left: Breadcrumbs (flex-1 ensures it grows, min-w-0 allows truncation) */}
       <div className="min-w-0">
         <Breadcrumbs items={items} />

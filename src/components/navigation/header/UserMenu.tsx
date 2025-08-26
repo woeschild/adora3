@@ -25,14 +25,14 @@ export function UserMenu({ name, email, avatar, onClick }: UserMenuProps) {
       </div>
       {/* User info – hidden on mobile */}
       <div className="hidden sm:flex flex-col min-w-0">
-        <span className="text-sm font-semibold text-gray-900 truncate">
+        <span className=" font-semibold text-gray-900 truncate">
           {name}
         </span>
-        <span className="text-xs text-gray-500 truncate">{email}</span>
+        <span className="text-xs text-gray-400 truncate lowercase">{email}</span>
       </div>
 
       {/* Dropdown icon (always visible) */}
-      <ChevronDown className="text-gray-600 shrink-0" />
+      <ChevronDown size={16} className="text-gray-600 shrink-0" />
     </div>
   );
 }

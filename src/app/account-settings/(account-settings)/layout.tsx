@@ -94,10 +94,10 @@ export default function AccountLayout({
   const activePath = pathname || '/account/info';
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4">
+    <div className="min-h-screen flex flex-col items-center">
       <div className="w-full max-w-5xl bg-white rounded-xl shadow-lg overflow-hidden">
         <TabHeader activePath={activePath} />
-        <main className="p-6">{children}</main>
+        <main>{children}</main>
       </div>
     </div>
   );

@@ -22,10 +22,10 @@ const AppointmentPage: NextPage = () => {
         <header className="mb-8">
           <h1 className="font-bold text-gray-900">Create your Appointment</h1>
           <div className="flex items-center mt-2">
-            <p className="text-xs text-orange-500 font-semibold mr-4 whitespace-nowrap">Step {step} of 2</p>
+            <p className="text-[var(--accent)] font-semibold mr-4 whitespace-nowrap">Step {step} of 2</p>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className="bg-orange-500 h-2 rounded-full transition-all duration-500 ease-in-out" 
+                className="bg-[var(--accent)] h-2 rounded-full transition-all duration-500 ease-in-out" 
                 style={{ width: progressWidth }}
               ></div>
             </div>
@@ -41,7 +41,7 @@ const AppointmentPage: NextPage = () => {
             <button 
                 onClick={handleBack}
                 disabled={step === 1}
-                className="flex items-center gap-2 bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 <ArrowLeft size={18} />
                 Previous Step
@@ -49,7 +49,7 @@ const AppointmentPage: NextPage = () => {
             <button 
                 onClick={handleNext}
                 disabled={step === 2}
-                className="flex items-center gap-2 bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 bg-[var(--accent)] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[var(--accent-dark)] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-opacity-50 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 Next Step
                 <ArrowRight size={18} />
@@ -68,16 +68,16 @@ const DownloadTemplate = () => {
   return (
     <div className="bg-white p-6 sm:p-8 rounded-lg border border-gray-200">
       <div className="mb-8">
-        <span className="bg-orange-100 text-orange-600 text-sm font-semibold px-4 py-1.5 rounded-full">Step 1</span>
+        <span className="bg-orange-100 text-[var(--accent)] font-semibold px-4 py-1.5 rounded-full">Step 1</span>
         <h2 className="font-bold text-gray-900 mt-3">Set Up Calendar Availability</h2>
         <p className="text-gray-600 mt-1">Fill all necessary process to complete this.</p>
       </div>
 
       <div className="bg-gray-50 border border-dashed border-gray-300 rounded-lg p-6 text-center">
-        <h3 className="text-xl font-semibold text-gray-900">Download Template</h3>
+        <h3 className="font-semibold text-gray-900">Download Template</h3>
         <p className="text-gray-600 mt-1 mb-6">Get the make.com template her on Adora.</p>
         <div className="flex flex-col justify-center gap-4">
-            <button className="w-full sm:w-auto bg-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 shadow-sm">
+            <button className="w-full sm:w-auto bg-[var(--accent)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--accent)] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:ring-opacity-50 shadow-sm">
                 Download
             </button>
             <button className="w-full sm:w-auto bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
@@ -97,8 +97,8 @@ const BookingAppointment = () => {
     return (
       <div className="bg-white p-6 sm:p-8 rounded-lg border border-gray-200">
         <div className="mb-8">
-          <span className="bg-orange-100 text-orange-600 text-sm font-semibold px-4 py-1.5 rounded-full">Step 2</span>
-          <h2 className="text-2xl font-bold text-gray-900 mt-3">Booking an Appointment</h2>
+          <span className="bg-orange-100 text-[var(--accent)] font-semibold px-4 py-1.5 rounded-full">Step 2</span>
+          <h2 className="font-bold text-gray-900 mt-3">Booking an Appointment</h2>
           <p className="text-gray-600 mt-1">Fill all necessary process to complete this.</p>
         </div>
   
@@ -108,13 +108,13 @@ const BookingAppointment = () => {
                 type="text"
                 id="webhook-url"
                 placeholder="Paste"
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent"
             />
             <div className="flex flex-col sm:flex-row justify-end gap-4 mt-6">
                 <button className="w-full sm:w-auto bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
                     Close
                 </button>
-                <button className="w-full sm:w-auto bg-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-orange-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 shadow-sm">
+                <button className="w-full sm:w-auto bg-[var(--accent)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--accent-dark)] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 shadow-sm">
                     Submit
                 </button>
             </div>

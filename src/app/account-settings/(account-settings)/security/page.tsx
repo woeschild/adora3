@@ -17,11 +17,11 @@ interface PasswordFieldProps {
 function PasswordField({ label, placeholder }: PasswordFieldProps) {
   return (
     <div className="flex flex-col space-y-2">
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="font-medium text-gray-700">{label}</label>
       <input
         type="password"
         placeholder={placeholder}
-        className="w-full rounded-md border border-gray-300 p-3 focus:border-orange-500 focus:ring focus:ring-orange-500 focus:ring-opacity-50"
+        className="w-full rounded-md border border-gray-300 p-3 focus:border-[var(--accent)] focus:ring focus:ring-[var(--accent)] focus:ring-opacity-50"
       />
     </div>
   );
@@ -35,8 +35,8 @@ export default function SecurityContent() {
     <div className="p-6 space-y-8">
       {/* Change Password Section */}
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800">Change password</h2>
-        <p className="text-gray-500 text-sm">
+        <h2 className="font-semibold text-gray-800">Change password</h2>
+        <p className="text-gray-500">
           Forgot or never set up your password?{' '}
           <a href="#" className="text-blue-600 hover:underline">
             Request a new password here

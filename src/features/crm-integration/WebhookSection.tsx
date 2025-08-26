@@ -26,11 +26,11 @@ export const WebhookSection: React.FC = () => {
       <div className="flex flex-col items-center text-center">
         <WebhookIcon />
         
-        <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-2">
+        <h3 className="text-sm font-semibold text-gray-900 mt-4 mb-2">
           Paste Webhook URL
         </h3>
         
-        <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+        <p className="text-gray-600 mb-6 leading-relaxed">
           Copy the generated Webhook URL from Make.com and paste it in field here.
         </p>
 

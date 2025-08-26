@@ -17,21 +17,21 @@ export  const AccountCard = ({onLinkClick}:{onLinkClick: ()=> void}) => {
           <img 
             src="https://placehold.co/48x48/E2E8F0/4A5568?text=A" 
             alt="Alex Meian" 
-            className="w-12 h-12 rounded-full mr-4"
+            className="w-10 h-10 rounded-full mr-4"
             onError={(e) => { e.currentTarget.src = 'https://placehold.co/48x48/E2E8F0/4A5568?text=A'; }}
           />
           <div className="flex-grow flex gap-2">
             <div>
                 <p className="font-semibold text-gray-800">Alex Meian</p>
-            <p className="text-sm text-gray-500">alex@gmail.com</p>
+            <p className=" text-gray-500">alex@gmail.com</p>
             </div>
-          <span className="bg-blue-400 text-white h-fit text-xs px-3 py-1 rounded-md">Pro plan</span>
+          <span className="bg-blue-400 text-white h-fit text-xs px-2 py-1 rounded-md">Pro plan</span>
           </div>
         </div>
   
         <a href="#" className="flex items-center justify-between text-orange-500 font-semibold py-3 hover:text-orange-600 transition-colors duration-200">
           <span>Upgrade plan</span>
-          <Upload size={20} />
+          <Upload size={16} />
         </a>
   
         <hr className="my-2 border-gray-200" />

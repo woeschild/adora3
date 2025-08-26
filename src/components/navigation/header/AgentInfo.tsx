@@ -8,7 +8,7 @@ interface AgentInfoProps {
 
 export function AgentInfo({ agentNumber }: AgentInfoProps) {
   return (
-    <div className="text-sm font-medium text-gray-800 hidden lg:flex">
+    <div className="font-medium text-gray-800 hidden lg:flex">
       Agent Number:{" "}
       <Link
         href={`tel:${agentNumber}`}

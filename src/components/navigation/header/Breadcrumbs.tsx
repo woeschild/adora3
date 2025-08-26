@@ -9,7 +9,7 @@ interface BreadcrumbsProps {
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb" className="hidden md:flex">
-      <ol className="flex items-center space-x-2 text-sm text-gray-600">
+      <ol className="flex items-center space-x-2 text-gray-600">
         {items.map((item, idx) => (
           <li key={idx} className="flex items-center">
             {item.href ? (

@@ -20,12 +20,12 @@ function WritableInputField({ label, initialValue }: WritableInputFieldProps) {
   const [value, setValue] = useState(initialValue);
   return (
     <div className="flex flex-col space-y-2">
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="font-medium text-gray-700">{label}</label>
       <input
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="w-full rounded-md bg-gray-100 p-3 text-gray-800 focus:border-orange-500 focus:ring focus:ring-orange-500 focus:ring-opacity-50"
+        className="w-full rounded-md bg-gray-100 p-3 text-gray-800 focus:border-[var(--accent)] focus:ring focus:ring-[var(--accent)] focus:ring-opacity-50"
       />
     </div>
   );
@@ -48,10 +48,10 @@ function WritableSelectField({ label, initialValue, options }: WritableSelectFie
   const [value, setValue] = useState(initialValue);
   return (
     <div className="flex flex-col space-y-2">
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="font-medium text-gray-700">{label}</label>
       <div className="relative">
         <select
-          className="w-full rounded-md bg-gray-100 p-3 pr-10 text-gray-800 appearance-none focus:border-orange-500 focus:ring focus:ring-orange-500 focus:ring-opacity-50"
+          className="w-full rounded-md bg-gray-100 p-3 pr-10 text-gray-800 appearance-none focus:border-[var(--accent)] focus:ring focus:ring-[var(--accent)] focus:ring-opacity-50"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         >
@@ -60,7 +60,7 @@ function WritableSelectField({ label, initialValue, options }: WritableSelectFie
           ))}
         </select>
         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
-          <ChevronDown size={20} />
+          <ChevronDown size={16} />
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@ function WritableBusinessNumberField() {
 
   return (
     <div className="flex flex-col space-y-2">
-      <label className="text-sm font-medium text-gray-700">Business Number</label>
+      <label className="font-medium text-gray-700">Business Number</label>
       <div className="flex gap-2 overflow-hidden">
         <select
           value={countryCode}
@@ -114,8 +114,8 @@ export default function ProfileContent() {
                   />
         </div>
         <div>
-          <h2 className="text-lg font-semibold text-gray-800">Alex Meian</h2>
-          <p className="text-sm text-gray-500">alex@gmail.com</p>
+          <h2 className="font-semibold text-gray-800">Alex Meian</h2>
+          <p className="text-gray-500">alex@gmail.com</p>
         </div>
       </div>
 
@@ -132,7 +132,7 @@ export default function ProfileContent() {
       </div>
 
       {/* Save Button */}
-      <button className="w-full md:w-auto px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 transition-colors duration-200">
+      <button className="w-fit md:w-auto px-6 py-3 bg-[var(--accent)] text-white font-semibold rounded-lg shadow-md hover:bg-[var(--accent-dark)] transition-colors duration-200">
         Save changes
       </button>
     </div>

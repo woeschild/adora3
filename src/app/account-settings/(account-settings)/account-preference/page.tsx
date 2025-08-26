@@ -19,10 +19,10 @@ interface SelectFieldProps {
 function SelectField({ label, value, options }: SelectFieldProps) {
   return (
     <div className="flex flex-col space-y-2">
-      <label className="text-sm font-medium text-gray-700">{label}</label>
+      <label className="font-medium text-gray-700">{label}</label>
       <div className="relative">
         <select
-          className="w-full rounded-md border border-gray-300 p-3 pr-10 focus:border-orange-500 focus:ring focus:ring-orange-500 focus:ring-opacity-50 appearance-none"
+          className="w-full rounded-md border border-gray-300 p-3 pr-10 focus:border-[var(--accent)] focus:ring focus:ring-[var(--accent)] focus:ring-opacity-50 appearance-none"
           value={value}
           onChange={() => {}} // Add a real onChange handler in a full application
         >
@@ -49,14 +49,14 @@ export default function PreferencesContent() {
     <div className="p-6 space-y-8">
       {/* Account Preferences Header */}
       <div className="space-y-2">
-        <h2 className="text-2xl font-semibold text-gray-800">Account preferences</h2>
-        <p className="text-gray-500 text-sm">Control settings related to your account.</p>
+        <h2 className="font-semibold text-gray-800">Account preferences</h2>
+        <p className="text-gray-500">Control settings related to your account.</p>
       </div>
       
       {/* Language & Region Section */}
       <div className="space-y-4">
-        <h3 className="text-lg font-medium text-gray-800">Language & Region</h3>
-        <p className="text-gray-500 text-sm">Update your language and timezone</p>
+        <h3 className="font-medium text-gray-800">Language & Region</h3>
+        <p className="text-gray-500">Update your language and timezone</p>
         <div className="flex flex-col gap-4">
           <SelectField label="Language" value="English (US)" options={languageOptions} />
           <SelectField label="Time zone" value="(UTC-08:00) Pacific Time (US & Canada)" options={timezoneOptions} />
@@ -65,8 +65,8 @@ export default function PreferencesContent() {
 
       {/* Delete Account Section */}
       <div className="space-y-4">
-        <h3 className="text-lg font-medium text-gray-800">Delete your account</h3>
-        <p className="text-gray-500 text-sm">
+        <h3 className="font-medium text-gray-800">Delete your account</h3>
+        <p className="text-gray-500">
           When you delete your account, you lose access to Adora account services, and we permanently delete your personal data. You can cancel the deletion within 14 days.
         </p>
         <button className="w-fit px-6 py-3 bg-white text-red-500 font-semibold rounded-lg shadow-md border border-red-500 hover:bg-red-50 transition-colors duration-200">

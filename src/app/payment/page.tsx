@@ -8,7 +8,7 @@ export default function PaymentPage () {
     const [selected, setSelected] = useState("paystack")
     return (
         <div className="m-6">
-            <div className="m-3">
+            <div className="m-3 font-semibold">
                 Select Payment Method
             </div>
               <PaymentOption
