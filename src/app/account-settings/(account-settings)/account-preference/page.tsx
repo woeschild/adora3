@@ -1,46 +1,5 @@
-'use client';
+import PreferenceSelectField from "@/features/account-settings/preference/preference-select-field";
 
-import React from 'react';
-import { ChevronDown } from 'lucide-react';
-
-/**
- * A simple reusable component for a select input field.
- * @param {object} props - The component props.
- * @param {string} props.label - The label for the input field.
- * @param {string} props.value - The currently selected value.
- * @param {Array<string>} props.options - An array of options for the select dropdown.
- */
-interface SelectFieldProps {
-  label: string;
-  value: string;
-  options: string[];
-}
-
-function SelectField({ label, value, options }: SelectFieldProps) {
-  return (
-    <div className="flex flex-col space-y-2">
-      <label className="font-medium text-gray-700">{label}</label>
-      <div className="relative">
-        <select
-          className="w-full rounded-md border border-gray-300 p-3 pr-10 focus:border-[var(--accent)] focus:ring focus:ring-[var(--accent)] focus:ring-opacity-50 appearance-none"
-          value={value}
-          onChange={() => {}} // Add a real onChange handler in a full application
-        >
-          {options.map((option) => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
-        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
-          <ChevronDown size={20} />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/**
- * The main component for the Account Preferences page content.
- */
 export default function PreferencesContent() {
   const languageOptions = ["English (US)", "Spanish (ES)", "French (FR)"];
   const timezoneOptions = ["(UTC-08:00) Pacific Time (US & Canada)", "(UTC-05:00) Eastern Time (US & Canada)", "(UTC) Coordinated Universal Time"];
@@ -58,8 +17,8 @@ export default function PreferencesContent() {
         <h3 className="font-medium text-gray-800">Language & Region</h3>
         <p className="text-gray-500">Update your language and timezone</p>
         <div className="flex flex-col gap-4">
-          <SelectField label="Language" value="English (US)" options={languageOptions} />
-          <SelectField label="Time zone" value="(UTC-08:00) Pacific Time (US & Canada)" options={timezoneOptions} />
+          <PreferenceSelectField label="Language" value="English (US)" options={languageOptions} />
+          <PreferenceSelectField label="Time zone" value="(UTC-08:00) Pacific Time (US & Canada)" options={timezoneOptions} />
         </div>
       </div>
 

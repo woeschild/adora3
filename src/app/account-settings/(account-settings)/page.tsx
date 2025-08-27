@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ChevronDown, Pencil } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 /**
  * A reusable component for displaying a key-value pair.

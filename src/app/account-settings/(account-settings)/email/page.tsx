@@ -1,34 +1,7 @@
-'use client';
-
-import React from 'react';
+import EmailAlert from '@/features/account-settings/email/email-alert';
 import { Info } from 'lucide-react'; 
-
-/**
- * A reusable alert component for warnings or information.
- * @param {object} props - The component props.
- * @param {React.ReactNode} props.icon - The icon for the alert.
- * @param {string} props.title - The title of the alert.
- * @param {string} props.message - The main message of the alert.
- */
-interface AlertProps {
-  icon: React.ReactNode;
-  title: string;
-  message: string;
-}
-
-function Alert({ icon, title, message }: AlertProps) {
-  return (
-    <div className="flex p-4 rounded-lg bg-orange-100 border border-orange-200">
-      <div className="flex-shrink-0 text-[var(--accent)]">
-        {icon}
-      </div>
-      <div className="ml-3">
-        <h4 className=" font-semibold text-[var(--accent)]">{title}</h4>
-        <p className="mt-1  text-[var(--accent)]">{message}</p>
-      </div>
-    </div>
-  );
-}
+import Image from 'next/image';
+import googleLogo from '../../../../../public/google.webp'
 
 /**
  * The main component for the Email page content.
@@ -46,11 +19,11 @@ export default function EmailContent() {
         <div className="flex items-center space-x-2 text-gray-600">
           {/* Using a placeholder since Google icon isn't in Lucide */}
           <div className="w-5 h-5">
-            {/* google icon */}
+            <Image alt='google' src={googleLogo} />
             </div> 
           <span>Log In with Google enabled</span>
         </div>
-        <Alert
+        <EmailAlert
           icon={<Info size={16} />}
           title="Connected account"
           message="Your account is connected to a Google account. Changing the email address here will disconnect your account from the Google account."
