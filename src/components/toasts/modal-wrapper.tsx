@@ -3,7 +3,7 @@ import { FC, ReactNode } from "react";
 
 const ModalWrapper: FC<{ children: ReactNode; onClose: () => void }> = ({ children, onClose }) => (
   <div
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+    className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000086]"
     onClick={onClose}
   >
     <div
