@@ -21,7 +21,7 @@ export function CallLogRow({
   log: CallLog;
 }) {
   return (
-    <Link href={`/call-logs/${log.id}`}
+    <Link href={`/dashboard/call-logs/${log.id}`}
       className="grid grid-cols-1 shadow-xs hover:bg-gray-100 md:grid-cols-5 gap-2 md:gap-4 items-center py-3 px-2 rounded-lg cursor-pointer
         transition-colors duration-200"
     >

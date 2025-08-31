@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export  const AccountCard = ({onLinkClick}:{onLinkClick: ()=> void}) => {
     const menuItems = [
-      { text: 'Profile', path:"/profile" },
-      { text: 'Account Settings', path:"/account-settings" },
+      { text: 'Profile', path:"/dashboard/profile" },
+      { text: 'Account Settings', path:"/dashboard/account-settings" },
       { text: 'Help', path:"#" },
       { text: 'Logout', path:"#" },
     ];

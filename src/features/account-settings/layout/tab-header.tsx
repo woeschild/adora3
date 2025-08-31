@@ -20,11 +20,11 @@ interface TabHeaderProps {
 
 export default function TabHeader({ activePath }: TabHeaderProps) {
   const tabs = [
-    { href: '/account-settings', label: 'Account info', icon: <User size={16} /> },
-    { href: '/account-settings/email', label: 'Email', icon: <Mail size={16} /> },
-    { href: '/account-settings/security', label: 'Security', icon: <Shield size={16} /> },
-    { href: '/account-settings/account-preference', label: 'Preference', icon: <Settings size={16} /> },
-    { href: '/account-settings/subscription', label: 'Subscription', icon: <CreditCard size={16} /> },
+    { href: '/dashboard/account-settings', label: 'Account info', icon: <User size={16} /> },
+    { href: '/dashboard/account-settings/email', label: 'Email', icon: <Mail size={16} /> },
+    { href: '/dashboard/account-settings/security', label: 'Security', icon: <Shield size={16} /> },
+    { href: '/dashboard/account-settings/account-preference', label: 'Preference', icon: <Settings size={16} /> },
+    { href: '/dashboard/account-settings/subscription', label: 'Subscription', icon: <CreditCard size={16} /> },
   ];
 
   return (

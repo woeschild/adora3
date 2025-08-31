@@ -2,8 +2,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
-import Sidebar from "@/components/navigation/sidebar/Sidebar";
-import Header from "@/components/navigation/header/Header";
 
 
 const poppins = Poppins({
@@ -27,22 +25,11 @@ export default function RootLayout({
       className="bg-[var(--color-primary)] text-[var(--color-secondary)]"
     >
       <body
-        className={`${poppins.variable} font-sans antialiased min-h-screen text-xs`}
+        className={`${poppins.className} font-sans antialiased text-xs`}
       >
-        <div className="flex h-screen">
-          {/* Sidebar - desktop only */}
-            <Sidebar />
-
-          <div className="flex-1 flex flex-col">
-            {/* Header - desktop only */}
-              <Header />
-
-            {/* Scrollable content */}
-            <main className="flex-1 overflow-y-auto p-2">
+         <main>
               {children}
-            </main>
-          </div>
-        </div>
+          </main>
       </body>
     </html>
   );

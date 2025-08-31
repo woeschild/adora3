@@ -6,7 +6,7 @@ import Link from "next/link";
 export function Notifications() {
   return (
     <Link
-      href="/notifications"
+      href="/dashboard/notifications"
       aria-label="Notifications"
       className="p-2 rounded-full hover:bg-gray-100 transition"
     >
