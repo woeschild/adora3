@@ -29,7 +29,7 @@ export default function SidebarMenu({ closeSidebar }: SidebarMenuProps) {
       onClick={closeSidebar}
       className={`flex items-center gap-2 px-3 py-3 rounded-lg transition 
          ${
-          pathname === 'dashboard' || pathname === '/dashboard' || pathname.includes('profile') || pathname.includes('notifications') ? "bg-[var(--primary)] text-[var(--accent)]" : "text-[var(--primary)] hover:bg-[var(--accent-dark)]"
+          pathname === 'dashboard' || pathname === '/dashboard' || pathname.includes('profile') || pathname.includes('notifications') ? "bg-main text-accent" : "text-[var(--primary)] hover:bg-accent-dark"
         }`}
     >
       <LayoutDashboard size={16} />
