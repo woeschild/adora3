@@ -1,8 +1,8 @@
 'use client'
 
-import AddCallButton from "@/features/outbound-calls/AddCallButton";
-import CallTable from "@/features/outbound-calls/CallTable";
-import SearchBar from "@/features/outbound-calls/SearchBar";
+import AddCallButton from "@/features/dashboard/outbound-calls/AddCallButton"
+import CallTable from "@/features/dashboard/outbound-calls/CallTable"
+import SearchBar from "@/features/dashboard/outbound-calls/SearchBar"
 
 export default function OutboundCallsPage () {
     return (

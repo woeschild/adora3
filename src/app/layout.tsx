@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../globals.css";
+import { ToastProvider } from "@/features/shared/toast";
 
 
 const poppins = Poppins({
@@ -11,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "Adora3",
   description: "A modern Next.js application",
 };
 
@@ -19,17 +20,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="bg-[var(--color-primary)] text-[var(--color-secondary)]"
-    >
-      <body
-        className={`${poppins.className} font-sans antialiased text-xs`}
-      >
-         <main>
-              {children}
-          </main>
+    <html lang="en">
+      <body className={`${poppins.className}`}>
+        <ToastProvider>
+          {children}
+        </ToastProvider>
       </body>
     </html>
   );

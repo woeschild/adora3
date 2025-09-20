@@ -1,6 +1,6 @@
-import AudioButton from "@/features/call-logs/agent-details/AudioButton";
-import CallHeader from "@/features/call-logs/agent-details/CallHeader";
-import Transcript from "@/features/call-logs/agent-details/Transcript";
+import AudioButton from "@/features/dashboard/call-logs/agent-details/AudioButton";
+import CallHeader from "@/features/dashboard/call-logs/agent-details/CallHeader";
+import Transcript from "@/features/dashboard/call-logs/agent-details/Transcript";
 
 export default function AgentDetailsPage () {
     return (

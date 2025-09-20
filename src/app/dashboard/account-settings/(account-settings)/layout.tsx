@@ -1,6 +1,6 @@
 'use client'
 
-import TabHeader from '@/features/account-settings/layout/tab-header';
+import TabHeader from '@/features/dashboard/account-settings/layout/tab-header';
 import { usePathname } from 'next/navigation';
 
 /**

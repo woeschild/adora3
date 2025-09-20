@@ -3,9 +3,9 @@
 import type { NextPage } from 'next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
-import DownloadTemplate from '@/features/appointments/download-template';
-import BookingAppointment from '@/features/appointments/booking-appointment';
-import Instructions from '@/features/appointments/instructions';
+import DownloadTemplate from '@/features/dashboard/appointments/download-template';
+import BookingAppointment from '@/features/dashboard/appointments/booking-appointment';
+import Instructions from '@/features/dashboard/appointments/instructions';
 
 const AppointmentPage: NextPage = () => {
   const [step, setStep] = useState(1);

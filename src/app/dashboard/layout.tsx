@@ -1,5 +1,5 @@
-import Header from "@/components/navigation/header/Header";
-import Sidebar from "@/components/navigation/sidebar/Sidebar";
+import Header from "@/features/dashboard/header/Header";
+import Sidebar from "@/features/dashboard/sidebar/Sidebar";
 
 export default function RootLayout({
   children,

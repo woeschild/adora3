@@ -1,4 +1,4 @@
-import PasswordField from "@/features/account-settings/security/password-field";
+import PasswordField from "@/features/dashboard/account-settings/security/password-field";
 
 /**
  * The main component for the Security page content.

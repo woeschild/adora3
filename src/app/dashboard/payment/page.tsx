@@ -1,12 +1,12 @@
 'use client'
 
-import Button from "@/components/button";
-import PaymentOption from "@/features/payment/PaymentOption";
 import { useState } from "react";
 import stripe from '../../../../public/pal.png'
 import pal from '../../../../public/pal.png'
 import stack from '../../../../public/pal.png'
 import Image from "next/image";
+import PaymentOption from "@/features/dashboard/payment/PaymentOption";
+import Button from "@/features/auth/shared-components/Button";
 
 export default function PaymentPage () {
     const [selected, setSelected] = useState("paystack")
@@ -43,7 +43,9 @@ export default function PaymentPage () {
             onChange={setSelected}
           />
           <div className="m-3">
-            <Button name="Continue" action={()=> null} />
+            <Button>
+              Continue
+            </Button>
           </div>
         </div>
     )

@@ -1,7 +1,7 @@
-import EmailAlert from '@/features/account-settings/email/email-alert';
 import { Info } from 'lucide-react'; 
 import Image from 'next/image';
 import googleLogo from '../../../../../../public/google.webp'
+import EmailAlert from '@/features/dashboard/account-settings/email/email-alert';
 
 /**
  * The main component for the Email page content.

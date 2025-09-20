@@ -1,7 +1,7 @@
-import NotificationItem from "@/features/notifications/notification-item";
+import NotificationItem from "@/features/dashboard/notifications/notification-item";
 
 /**
- * The main component for the Notifications page content.
+ * Main component for the Notifications page content.
  */
 export default function NotificationsContent() {
   const newNotifications = [

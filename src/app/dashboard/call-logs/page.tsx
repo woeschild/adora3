@@ -1,6 +1,6 @@
-import { RecentCallLogs } from "@/features/call-logs/RecentCallLogs";
-import SearchBar from "@/features/call-logs/SearchBar";
-import Tabs from "@/features/call-logs/Tabs";
+import { RecentCallLogs } from "@/features/dashboard/call-logs/RecentCallLogs";
+import SearchBar from "@/features/dashboard/call-logs/SearchBar";
+import Tabs from "@/features/dashboard/call-logs/Tabs";
 
 export default function CallLogsPage () {
     return (

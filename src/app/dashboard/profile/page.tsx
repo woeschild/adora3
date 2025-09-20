@@ -2,10 +2,9 @@
 
 import Image from 'next/image';
 import avatar from '../../../../public/profile.png'
-import WritableInputField from '@/features/profile/writable-input-field';
-import WritableSelectField from '@/features/profile/writable-select-field';
-import WritableBusinessNumberField from '@/features/profile/writable-business-number-field';
-
+import WritableInputField from '@/features/dashboard/profile/writable-input-field';
+import WritableBusinessNumberField from '@/features/dashboard/profile/writable-business-number-field';
+import WritableSelectField from '@/features/dashboard/profile/writable-select-field';
 /**
  * The main component for the Profile page content.
  */

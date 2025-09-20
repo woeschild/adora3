@@ -1,4 +1,4 @@
-import { AdoraCRMSteps } from "@/features/crm-integration/AdoraCRMSteps";
+import { AdoraCRMSteps } from "@/features/dashboard/crm-integration/AdoraCRMSteps";
 import React from "react";
 
 export default function CRMIntegrationPage() {

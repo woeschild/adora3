@@ -1,7 +1,6 @@
 'use client'
 
-import DeleteConfirmationModal from "@/components/toasts/delete-confirmation";
-import PreferenceSelectField from "@/features/account-settings/preference/preference-select-field";
+import PreferenceSelectField from "@/features/dashboard/account-settings/preference/preference-select-field";
 import { useState } from "react";
 
 export default function PreferencesContent() {
@@ -45,9 +44,6 @@ export default function PreferencesContent() {
         </button>
       </div>
       </div>
-      {
-        confirm && <DeleteConfirmationModal onConfirm={()=>{}} onCancel={toggle} />
-      }
     </>
   );
 }

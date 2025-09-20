@@ -1,19 +1,269 @@
 @import "tailwindcss";
 
 :root {
-  /* Primary (White) */
-  --primary: hsl(0, 0%, 100%);
-  --primary-dark: hsl(0, 0%, 90%);
+  /* I don't want to use shadows so the main background is
+     a bit off-white so that cards and things that need to
+     appear elevated from the background can do so 
+     without actually having a shadow */
+  --bg-main: hsl(0, 0%, 98%);
+  --bg-surfaces: hsl(0, 0%, 100%);
 
   /* Secondary (Black) */
-  --secondary: hsl(0, 0%, 0%);
-  --secondary-light: hsl(0, 0%, 10%);
+  --text: hsl(0, 0%, 0%);
+  --text-muted: hsl(0, 0%, 40%);
 
   /* Accent (Orange tone) */
   --accent: hsl(25, 100%, 44%);
   --accent-dark: hsl(25, 100%, 40%);
   --accent-light: hsl(25, 100%, 52%);
 
-  /* Typography */
-  --font-sans: 'Poppins', sans-serif;
+  /* Gray/Border colors */
+  --border-subtle: hsl(0, 0%, 90%);
+  --gray-light: hsl(0, 0%, 85%);
+  --gray: hsl(0, 0%, 70%);
+  --gray-dark: hsl(0, 0%, 50%);
+
+  /* Font sizes based on 0.75rem base */
+  --text-xs: 0.625rem;    /* 10px - smaller than base */
+  --text-sm: 0.70rem;    /* ?px - smaller than base */
+  --text-base: 0.75rem;   /* 12px - base size */
+  --text-md: 0.875rem;    /* 14px - slightly larger */
+  --text-lg: 1rem;        /* 16px - larger */
+  --text-xl: 1.125rem;    /* 18px - extra large */
+  --text-2xl: 1.25rem;    /* 20px - title small */
+  --text-3xl: 1.5rem;     /* 24px - title medium */
+  --text-4xl: 1.875rem;   /* 30px - title large */
+  --text-5xl: 2.25rem;    /* 36px - title extra large */
+}
+
+body {
+  margin: 0;
+  font-size: .75rem;
+  color: var(--text);
+  background-color: var(--bg-main);
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  /* Background utilities */
+  .bg-main {
+    background-color: var(--bg-main);
+  }
+  
+  .bg-surface {
+    background-color: var(--bg-surfaces);
+  }
+  
+  /* Text color utilities */
+  .text-primary {
+    color: var(--text);
+  }
+  
+  .text-muted {
+    color: var(--text-muted);
+  }
+  
+  /* Accent color utilities */
+  .text-accent {
+    color: var(--accent);
+  }
+  
+  .text-accent-dark {
+    color: var(--accent-dark);
+  }
+  
+  .text-accent-light {
+    color: var(--accent-light);
+  }
+  
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  
+  .bg-accent-dark {
+    background-color: var(--accent-dark);
+  }
+  
+  .bg-accent-light {
+    background-color: var(--accent-light);
+  }
+  
+  /* Gray background utilities */
+  .bg-gray {
+    background-color: var(--gray);
+  }
+  
+  .bg-gray-light {
+    background-color: var(--gray-light);
+  }
+  
+  .bg-gray-dark {
+    background-color: var(--gray-dark);
+  }
+  
+  /* Border utilities */
+  .border-accent {
+    border-color: var(--accent);
+  }
+  
+  .border-accent-dark {
+    border-color: var(--accent-dark);
+  }
+  
+  .border-accent-light {
+    border-color: var(--accent-light);
+  }
+  
+  .border-muted {
+    border-color: var(--text-muted);
+  }
+  
+  .border-subtle {
+    border-color: var(--border-subtle);
+  }
+  
+  .border-gray {
+    border-color: var(--gray);
+  }
+  
+  .border-gray-light {
+    border-color: var(--gray-light);
+  }
+
+  /* Font size utilities based on custom typography scale */
+  .text-xs {
+    font-size: var(--text-xs);
+  }
+
+   .text-sm {
+    font-size: var(--text-sm);
+  }
+  
+  .text-base {
+    font-size: var(--text-base);
+  }
+  
+  .text-md {
+    font-size: var(--text-md);
+  }
+  
+  .text-lg {
+    font-size: var(--text-lg);
+  }
+  
+  .text-xl {
+    font-size: var(--text-xl);
+  }
+  
+  .text-2xl {
+    font-size: var(--text-2xl);
+  }
+  
+  .text-3xl {
+    font-size: var(--text-3xl);
+  }
+  
+  .text-4xl {
+    font-size: var(--text-4xl);
+  }
+  
+  .text-5xl {
+    font-size: var(--text-5xl);
+  }
+  
+  /* Hover state utilities */
+  .hover\:bg-accent:hover {
+    background-color: var(--accent);
+  }
+  
+  .hover\:bg-accent-dark:hover {
+    background-color: var(--accent-dark);
+  }
+  
+  .hover\:bg-accent-light:hover {
+    background-color: var(--accent-light);
+  }
+  
+  .hover\:text-accent:hover {
+    color: var(--accent);
+  }
+  
+  .hover\:text-accent-dark:hover {
+    color: var(--accent-dark);
+  }
+  
+  .hover\:text-accent-light:hover {
+    color: var(--accent-light);
+  }
+  
+  /* Focus state utilities */
+  .focus\:border-accent:focus {
+    border-color: var(--accent);
+  }
+  
+  .focus\:ring-accent:focus {
+    --tw-ring-color: var(--accent);
+  }
+  
+  /* Active state utilities */
+  .active\:bg-accent-dark:active {
+    background-color: var(--accent-dark);
+  }
+  
+  /* Placeholder utilities */
+  .placeholder\:text-muted::placeholder {
+    color: var(--text-muted);
+  }
+  
+  /* Card/Surface elevation utility */
+  .elevated {
+    background-color: var(--bg-surfaces);
+  }
+  
+  /* Common button styles using your variables */
+  .btn-primary {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--accent-dark);
+  }
+  
+  .btn-primary:active {
+    background-color: var(--accent-dark);
+    transform: translateY(1px);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--gray-light);
+  }
+  
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-ghost:hover {
+    background-color: var(--bg-surfaces);
+    color: var(--accent);
+  }
 }

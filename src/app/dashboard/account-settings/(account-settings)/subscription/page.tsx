@@ -1,7 +1,5 @@
 'use client'
-
-import UpgradePlanModal from "@/components/toasts/upgrade-plan";
-import InfoItem from "@/features/account-settings/subscription/info-item";
+import InfoItem from "@/features/dashboard/account-settings/subscription/info-item";
 import { useState } from "react";
 
 export default function SubscriptionContent() {
@@ -49,9 +47,6 @@ export default function SubscriptionContent() {
         Upgrade Plan
       </button>
     </div>
-    {
-      show && <UpgradePlanModal onCancel={toggle} onConfirm={()=>{}} />
-    }
     </>
   );
 }
