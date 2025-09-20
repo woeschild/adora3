@@ -10,7 +10,7 @@ export default function FooterLinks() {
           <FooterLinkComponent href="/pricing">Pricing</FooterLinkComponent>
           <FooterLinkComponent href="/terms">Terms</FooterLinkComponent>
           <FooterLinkComponent href="/contact">Contact</FooterLinkComponent>
-          <FooterLinkComponent href="/get-started">Get Started</FooterLinkComponent>
+          <FooterLinkComponent href="/signup">Get Started</FooterLinkComponent>
         </div>
       </div>
 
